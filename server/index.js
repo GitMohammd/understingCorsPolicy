@@ -5,11 +5,12 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://127.0.0.1:5500",
+      origin: "http://127.0.0.1:5500",
+      methods: ["GET", "POST"],
   })
 );
 
-app.get("/data", (req, res) => {
+app.put("/data", (req, res) => {
   res.json({
     name: "Shamim",
     description: "Land of Deen",
